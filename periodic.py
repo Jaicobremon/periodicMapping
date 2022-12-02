@@ -1,245 +1,249 @@
-element = input("What is your element? ")
+element = input("What is your element? ").lower()
 element_mapping = {
-    "Hydrogen": "H",
-    "Helium": "He",
-    "Lithium": "Li",
-    "Beryllium": "Be",
-    "Boron": "B",
-    "Nitrogen": "N",
-    "Oxygen": "O",
-    "Fluorine": "F",
-    "Neon": "Ne",
-    "Sodium": "Na",
-    "Magnesium": "Mg",
-    "Aluminum": "Al",
-    "Silicon": "Si",
-    "Phosphorus": "P",
-    "Sulfur": "S",
-    "Chlorine": "Cl",
-    "Argon": "Ar",
-    "Potassium": "K",
-    "Calcium": "Ca",
-    "Scandium":"Sc",
-    "Titanium": "Ti",
-    "Vanadium": "V",
-    "Chromium": "Cr",
-    "Manganese": "Mn",
-    "Iron": "Fe",
-    "Cobalt": "Co",
-    "Nickel": "Ni",
-    "Copper": "Cu",
-    "Zinc": "Zn",
-    "Gallium": "Ga",
-    "Germanium": "Ge",
-    "Arsenic": "As",
-    "Selenium": "Se",
-    "Bromine": "Br",
-    "Krypton": "Kr",
-    "Rubidium": "Rb",
-    "Strontium": "Sr",
-    "Yttrium": "Y",
-    "Zirconium": "Zr",
-    "Niobium": "Nb",
-    "Molybdenum": "Mo",
-    "Technetium": "Tc",
-    "Ruthenium": "Ru",
-    "Rhodium": "Rh",
-    "Palladium": "Pd",
-    "Silver": "Ag",
-    "Cadmium": "Cd",
-    "Indium": "In",
-    "Tin": "Sn",
-    "Antimony": "Sb",
-    "Tellurium": "Te",
-    "Iodine": "I",
-    "Xenon": "Xe",
-    "Cesium": "Cs",
-    "Barium": "Ba",
-    "Lanthanum": "La",
-    "Cerium": "Ce",
-    "Praseodymium": "Pr",
-    "Neodymium": "Nd",
-    "Promethium": "Pm",
-    "Samarium": "Sm",
-    "Europium": "Eu",
-    "Gadolinium": "Gd",
-    "Terbium": "Tb",
-    "Dysprosium": "Dy",
-    "Holmium": "Ho",
-    "Erbium": "Tr",
-    "Thulium": "Tm",
-    "Ytterbium": "Yb",
-    "Lutetium": "Lu",
-    "Hafnium": "Hf",
-    "Tantalum": "Ta",
-    "Tungsten": "W",
-    "Rhenium": "Re",
-    "Osmium": "Os",
-    "Iridium": "Ir",
-    "Platinum": "Pt",
-    "Gold": "Au",
-    "Mercury": "Hg",
-    "Thallium": "Tl",
-    "Lead": "Pb",
-    "Bismuth": "Bi",
-    "Polonium": "Po",
-    "Astatine": "At",
-    "Radon": "Rn",
-    "Francium": "Fr",
-    "Radium": "Ra",
-    "Actinium": "Ac",
-    "Thorium": "Th",
-    "Protactinium": "Pa",
-    "Uranium": "U",
-    "Neptunium": "Np",
-    "Plutonium": "Pu",
-    "Americium": "Am",
-    "Curium": "Cm",
-    "Berkelium": "Bk",
-    "Californium": "Cf",
-    "Einsteinium": "Es",
-    "Fermium": "Fm",
-    "Mendelevium": "Md",
-    "Nobelium": "No",
-    "Lawerencium": "Lr",
-    "Rutherforium": "Rf",
-    "Dubnium": "Db",
-    "Seaborgium": "Sg",
-    "Bohrium": "Bh",
-    "Hassium": "Hs",
-    "Meitnerium": "Mt",
-    "Darmstadtium": "Ds",
-    "Roentgenium": "Rg",
-    "Copernicium": "Cn",
-    "Nihonium": "Nh",
-    "Flerovium": "Fl",
-    "Moscovium": "Mc",
-    "Livermorium": "Lv",
-    "Tennessine": "Ts",
-    "Oganesson": "Og"
+    "hydrogen": "H, Charge= 1+, valency= 1, this element is not a metal",
+    "helium": "He, Charge= 0, this element is not a metal but is a noble gas",
+    "lithium": "Li, Charge= 1+, this element is a metal ",
+    "beryllium": "Be, Charge= 2+, this element is a metal ",
+    "boron": "B, Charge= 3+ ",
+    "carbon": "C, charge= 4- or 4+",
+    "nitrogen": "N, Charge= 3-",
+    "oxygen": "O, Charge= 2-",
+    "fluorine": "F, Charge= 1- ",
+    "neon": "Ne, Charge= 0 ",
+    "sodium": "Na, Charge= 1+ ",
+    "magnesium": "Mg, Charge= 2+ ",
+    "aluminum": "Al, Charge= 3+ ",
+    "silicon": "Si, Charge= 4+ or 4- ",
+    "phosphorus": "P, Charge= 3-",
+    "sulfur": "S, Charge= 2-",
+    "chlorine": "Cl, Charge= 1- ",
+    "argon": "Ar, Charge= 0 ",
+    "potassium": "K, Charge= 1+ ",
+    "calcium": "Ca, Charge= 2+ ",
+    "scandium": "Sc, Charge= 3+ ",
+    "titanium": "Ti, Charge= 3+ or 4+ ",
+    "vanadium": "V, Charge= 2+ or 3+ or 4+ or 5+ ",
+    "chromium": "Cr, Charge= 2+ or 3+ or 6+ ",
+    "manganese": "Mn, Charge= 2+ or 4+ or 7+ ",
+    "iron": "Fe, Charge= 2+ or 3+ ",
+    "cobalt": "Co, Charge= 2+ or 3+",
+    "nickel": "Ni, Charge= 2+ ",
+    "copper": "Cu, Charge= 1+ or 2+, this element is a metal",
+    "zinc": "Zn, Charge= 2+",
+    "gallium": "Ga, Charge= 3+, this element is a metal",
+    "germanium": "Ge, Charge= 4- or 2+ or 4+",
+    "arsenic": "As, Charge= 3-",
+    "selenium": "Se, Charge= 2- or 4+ or 6+",
+    "bromine": "Br, Charge= 1-",
+    "krypton": "Kr, Charge= 0 ",
+    "rubidium": "Rb, Charge= 1+",
+    "strontium": "Sr, Charge= 2+, this element is a metal",
+    "yttrium": "Y, Charge= 3+",
+    "zirconium": "Zr, Charge= 4+",
+    "niobium": "Nb, Charge= 3+ or 5+",
+    "molybdenum": "Mo, Charge= 3+ or 6+",
+    "technetium": "Tc, Charge= 6+",
+    "ruthenium": "Ru, Charge= 3+ or 4+ or 8+",
+    "rhodium": "Rh, Charge= 4+",
+    "palladium": "Pd, Charge= 2+ or 4+",
+    "silver": "Ag, Charge= 1+",
+    "cadmium": "Cd, Charge= 2+",
+    "indium": "In, Charge= 3+, this element is a metal",
+    "tin": "Sn, Charge= 2+ or 4+",
+    "antimony": "Sb, Charge= 3- or 3+ or 5+",
+    "tellurium": "Te, Charge= 2- or 4+ or 6+",
+    "iodine": "I, Charge= 1-",
+    "xenon": "Xe, Charge= 0",
+    "cesium": "Cs, Charge= 1+",
+    "barium": "Ba, Charge= 2+, this element is a metal",
+    "lanthanum": "La, Charge= 3+",
+    "cerium": "Ce, Charge= 3+ or 4+",
+    "praseodymium": "Pr, Charge= 3+",
+    "neodymium": "Nd, Charge= 3+ or 4+",
+    "promethium": "Pm, Charge= 3+",
+    "samarium": "Sm, Charge= 3+",
+    "europium": "Eu, Charge= 3+",
+    "gadolinium": "Gd, Charge= 3+",
+    "terbium": "Tb, Charge= 3+ or 4+",
+    "dysprosium": "Dy, Charge= 3+",
+    "holmium": "Ho, Charge= 3+",
+    "erbium": "Tr, Charge= 3+",
+    "thulium": "Tm, Charge= 3+",
+    "ytterbium": "Yb, Charge= 3+",
+    "lutetium": "Lu, Charge= 3+",
+    "hafnium": "Hf, Charge= 4+",
+    "tantalum": "Ta, Charge= 5+",
+    "tungsten": "W, Charge= 6+",
+    "rhenium": "Re, Charge= 2+ or 4+ or 6+ or 7+",
+    "osmium": "Os, Charge= 3+ or 4+ or 6+ or 8+",
+    "iridium": "Ir, Charge= 3+ or 4+ or 6+",
+    "platinum": "Pt, Charge= 2+ or 4+ or 6+",
+    "gold": "Au, Charge= 1+ or 2+ or 3+",
+    "mercury": "Hg, Charge= 1+ or 2+",
+    "thallium": "Tl, Charge= 1+ or 3+",
+    "lead": "Pb, Charge= 2+ or 4+",
+    "bismuth": "Bi, Charge= 3+",
+    "polonium": "Po, Charge= 2+ or 4+",
+    "astatine": "At, Charge= 1-",
+    "radon": "Rn, Charge= 0",
+    "francium": "Fr, Charge= 1+",
+    "radium": "Ra, Charge= 2+",
+    "actinium": "Ac, Charge= 3+",
+    "thorium": "Th, Charge= 4+",
+    "protactinium": "Pa, Charge= 5+",
+    "uranium": "U, Charge= 3+ or 4+ or 6+",
+    "neptunium": "Np, Charge= 3+ or 7+",
+    "plutonium": "Pu, Charge= 4+",
+    "americium": "Am, Charge= 3+",
+    "curium": "Cm, Charge= 3+ or 4+",
+    "berkelium": "Bk, Charge= 3+ or 4+",
+    "californium": "Cf, Charge= 3+",
+    "einsteinium": "Es, Charge= 3+",
+    "fermium": "Fm, Charge= 2+ or 3+",
+    "mendelevium": "Md, Charge= 2+ or 3+",
+    "nobelium": "No, Charge= 2+",
+    "lawrencium": "Lr, Charge= 3+",
+    "rutherfordium": "Rf, Charge= 2+ or 3+ or 4+",
+    "dubnium": "Db, Charge= 3+ or 4+ or 5+",
+    "seaborgium": "Sg, Charge= 0 or 3+ or 4+ or 5+ or 6+",
+    "bohrium": "Bh, Charge= 3+ or 4+ or 5+ or 7+",
+    "hassium": "Hs, Charge= 2+ or 3+ or 4+ or 6+ or 8+",
+    "meitnerium": "Mt, Charge= 1+ or 3+ or 6+",
+    "darmstadtium": "Ds, Charge= 0 or 2+ or 4+ or 6+ or 8+",
+    "roentgenium": "Rg, Charge= 3+ or 5+",
+    "copernicium": "Cn, Charge= 4+",
+    "nihonium": "Nh, Charge= 1- or 1+ or 3+ or 5+",
+    "flerovium": "Fl, Charge= 0 or 1+ or 2+ or 4+ or 6+",
+    "moscovium": "Mc, Charge= 1+ or 3+",
+    "livermorium": "Lv, Charge= 2+",
+    "tennessine": "Ts, Charge= -1 or 1+ or 3+ or 5+",
+    "oganesson": "Og, Charge= 1- or 0 or 1+ or 2+ or 4+ or 6+"
 }
-element_charges = {
-    "Hydrogen": "1+",
-    "Helium": "noble gas",
-    "Lithium": "1+",
-    "Beryllium": "2+",
-    "Boron": "3-, 3+",
-    "Nitrogen": "3-",
-    "Oxygen": "2-",
-    "Fluorine": "1-"
-    "Neon":
-    "Sodium":
-    "Magnesium":
-    "Aluminum":
-    "Silicon":
-    "Phosphorus":
-    "Sulfur":
-    "Chlorine":
-    "Argon":
-    "Potassium":
-    "Calcium":
-    "Scandium":
-    "Titanium":
-    "Vanadium":
-    "Chromium":
-    "Manganese":
-    "Iron":
-    "Cobalt":
-    "Nickel":
-    "Copper":
-    "Zinc":
-    "Gallium":
-    "Germanium":
-    "Arsenic":
-    "Selenium":
-    "Bromine":
-    "Krypton":
-    "Rubidium":
-    "Strontium":
-    "Yttrium":
-    "Zirconium":
-    "Niobium":
-    "Molybdenum":
-    "Technetium":
-    "Ruthenium":
-    "Rhodium":
-    "Palladium":
-    "Silver":
-    "Cadmium":
-    "Indium":
-    "Tin":
-    "Antimony":
-    "Tellurium":
-    "Iodine":
-    "Xenon":
-    "Cesium":
-    "Barium":
-    "Lanthanum":
-    "Cerium":
-    "Praseodymium":
-    "Neodymium":
-    "Promethium":
-    "Samarium":
-    "Europium":
-    "Gadolinium":
-    "Terbium":
-    "Dysprosium":
-    "Holmium":
-    "Erbium":
-    "Thulium":
-    "Ytterbium":
-    "Lutetium":
-    "Hafnium":
-    "Tantalum":
-    "Tungsten":
-    "Rhenium":
-    "Osmium":
-    "Iridium":
-    "Platinum":
-    "Gold":
-    "Mercury":
-    "Thallium":
-    "Lead":
-    "Bismuth":
-    "Polonium":
-    "Astatine":
-    "Radon":
-    "Francium":
-    "Radium":
-    "Actinium":
-    "Thorium":
-    "Protactinium":
-    "Uranium":
-    "Neptunium":
-    "Plutonium":
-    "Americium":
-    "Curium":
-    "Berkelium":
-    "Californium":
-    "Einsteinium":
-    "Fermium":
-    "Mendelevium":
-    "Nobelium":
-    "Lawerencium":
-    "Rutherforium":
-    "Dubnium":
-    "Seaborgium":
-    "Bohrium":
-    "Hassium":
-    "Meitnerium":
-    "Darmstadtium":
-    "Roentgenium":
-    "Copernicium":
-    "Nihonium":
-    "Flerovium":
-    "Moscovium":
-    "Livermorium":
-    "Tennessine":
-    "Oganesson":
-}
-output = ""
 for elements in element_mapping:
-    for charges in element_charges:
-        output = element_mapping.get(element, "!") + element_charges.get(element, "!")
-        print(output)
-    break
+    output = element_mapping.get(element, "Sorry, could not find this element")
+    print(output)
+    command = input("Would you like to try another element? ").upper()
+    if command == "YES":
+        element = input("What is your element? ").lower()
+        element_mapping = {
+            "hydrogen": "H, Charge= 1+, valency= 1, this element is not a metal",
+            "helium": "He, Charge= 0, this element is not a metal but is a noble gas",
+            "lithium": "Li, Charge= 1+, this element is a metal ",
+            "beryllium": "Be, Charge= 2+, this element is a metal ",
+            "boron": "B, Charge= 3+ ",
+            "carbon": "C, charge= 4- or 4+",
+            "nitrogen": "N, Charge= 3-",
+            "oxygen": "O, Charge= 2-",
+            "fluorine": "F, Charge= 1- ",
+            "neon": "Ne, Charge= 0 ",
+            "sodium": "Na, Charge= 1+ ",
+            "magnesium": "Mg, Charge= 2+ ",
+            "aluminum": "Al, Charge= 3+ ",
+            "silicon": "Si, Charge= 4+ or 4- ",
+            "phosphorus": "P, Charge= 3-",
+            "sulfur": "S, Charge= 2-",
+            "chlorine": "Cl, Charge= 1- ",
+            "argon": "Ar, Charge= 0 ",
+            "potassium": "K, Charge= 1+ ",
+            "calcium": "Ca, Charge= 2+ ",
+            "scandium": "Sc, Charge= 3+ ",
+            "titanium": "Ti, Charge= 3+ or 4+ ",
+            "vanadium": "V, Charge= 2+ or 3+ or 4+ or 5+ ",
+            "chromium": "Cr, Charge= 2+ or 3+ or 6+ ",
+            "manganese": "Mn, Charge= 2+ or 4+ or 7+ ",
+            "iron": "Fe, Charge= 2+ or 3+ ",
+            "cobalt": "Co, Charge= 2+ or 3+",
+            "nickel": "Ni, Charge= 2+ ",
+            "copper": "Cu, Charge= 1+ or 2+, this element is a metal",
+            "zinc": "Zn, Charge= 2+",
+            "gallium": "Ga, Charge= 3+, this element is a metal",
+            "germanium": "Ge, Charge= 4- or 2+ or 4+",
+            "arsenic": "As, Charge= 3-",
+            "selenium": "Se, Charge= 2- or 4+ or 6+",
+            "bromine": "Br, Charge= 1-",
+            "krypton": "Kr, Charge= 0 ",
+            "rubidium": "Rb, Charge= 1+",
+            "strontium": "Sr, Charge= 2+, this element is a metal",
+            "yttrium": "Y, Charge= 3+",
+            "zirconium": "Zr, Charge= 4+",
+            "niobium": "Nb, Charge= 3+ or 5+",
+            "molybdenum": "Mo, Charge= 3+ or 6+",
+            "technetium": "Tc, Charge= 6+",
+            "ruthenium": "Ru, Charge= 3+ or 4+ or 8+",
+            "rhodium": "Rh, Charge= 4+",
+            "palladium": "Pd, Charge= 2+ or 4+",
+            "silver": "Ag, Charge= 1+",
+            "cadmium": "Cd, Charge= 2+",
+            "indium": "In, Charge= 3+, this element is a metal",
+            "tin": "Sn, Charge= 2+ or 4+",
+            "antimony": "Sb, Charge= 3- or 3+ or 5+",
+            "tellurium": "Te, Charge= 2- or 4+ or 6+",
+            "iodine": "I, Charge= 1-",
+            "xenon": "Xe, Charge= 0",
+            "cesium": "Cs, Charge= 1+",
+            "barium": "Ba, Charge= 2+, this element is a metal",
+            "lanthanum": "La, Charge= 3+",
+            "cerium": "Ce, Charge= 3+ or 4+",
+            "praseodymium": "Pr, Charge= 3+",
+            "neodymium": "Nd, Charge= 3+ or 4+",
+            "promethium": "Pm, Charge= 3+",
+            "samarium": "Sm, Charge= 3+",
+            "europium": "Eu, Charge= 3+",
+            "gadolinium": "Gd, Charge= 3+",
+            "terbium": "Tb, Charge= 3+ or 4+",
+            "dysprosium": "Dy, Charge= 3+",
+            "holmium": "Ho, Charge= 3+",
+            "erbium": "Tr, Charge= 3+",
+            "thulium": "Tm, Charge= 3+",
+            "ytterbium": "Yb, Charge= 3+",
+            "lutetium": "Lu, Charge= 3+",
+            "hafnium": "Hf, Charge= 4+",
+            "tantalum": "Ta, Charge= 5+",
+            "tungsten": "W, Charge= 6+",
+            "rhenium": "Re, Charge= 2+ or 4+ or 6+ or 7+",
+            "osmium": "Os, Charge= 3+ or 4+ or 6+ or 8+",
+            "iridium": "Ir, Charge= 3+ or 4+ or 6+",
+            "platinum": "Pt, Charge= 2+ or 4+ or 6+",
+            "gold": "Au, Charge= 1+ or 2+ or 3+",
+            "mercury": "Hg, Charge= 1+ or 2+",
+            "thallium": "Tl, Charge= 1+ or 3+",
+            "lead": "Pb, Charge= 2+ or 4+",
+            "bismuth": "Bi, Charge= 3+",
+            "polonium": "Po, Charge= 2+ or 4+",
+            "astatine": "At, Charge= 1-",
+            "radon": "Rn, Charge= 0",
+            "francium": "Fr, Charge= 1+",
+            "radium": "Ra, Charge= 2+",
+            "actinium": "Ac, Charge= 3+",
+            "thorium": "Th, Charge= 4+",
+            "protactinium": "Pa, Charge= 5+",
+            "uranium": "U, Charge= 3+ or 4+ or 6+",
+            "neptunium": "Np, Charge= 3+ or 7+",
+            "plutonium": "Pu, Charge= 4+",
+            "americium": "Am, Charge= 3+",
+            "curium": "Cm, Charge= 3+ or 4+",
+            "berkelium": "Bk, Charge= 3+ or 4+",
+            "californium": "Cf, Charge= 3+",
+            "einsteinium": "Es, Charge= 3+",
+            "fermium": "Fm, Charge= 2+ or 3+",
+            "mendelevium": "Md, Charge= 2+ or 3+",
+            "nobelium": "No, Charge= 2+",
+            "lawrencium": "Lr, Charge= 3+",
+            "rutherfordium": "Rf, Charge= 2+ or 3+ or 4+",
+            "dubnium": "Db, Charge= 3+ or 4+ or 5+",
+            "seaborgium": "Sg, Charge= 0 or 3+ or 4+ or 5+ or 6+",
+            "bohrium": "Bh, Charge= 3+ or 4+ or 5+ or 7+",
+            "hassium": "Hs, Charge= 2+ or 3+ or 4+ or 6+ or 8+",
+            "meitnerium": "Mt, Charge= 1+ or 3+ or 6+",
+            "darmstadtium": "Ds, Charge= 0 or 2+ or 4+ or 6+ or 8+",
+            "roentgenium": "Rg, Charge= 3+ or 5+",
+            "copernicium": "Cn, Charge= 4+",
+            "nihonium": "Nh, Charge= 1- or 1+ or 3+ or 5+",
+            "flerovium": "Fl, Charge= 0 or 1+ or 2+ or 4+ or 6+",
+            "moscovium": "Mc, Charge= 1+ or 3+",
+            "livermorium": "Lv, Charge= 2+",
+            "tennessine": "Ts, Charge= -1 or 1+ or 3+ or 5+",
+            "oganesson": "Og, Charge= 1- or 0 or 1+ or 2+ or 4+ or 6+"
+            }
+    else:
+        break
